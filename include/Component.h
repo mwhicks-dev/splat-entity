@@ -21,6 +21,8 @@ namespace SPlat {
 
             const size_t get_owner(void) { return owner; }
 
+            void set_owner(const size_t id) { this->id = id; }
+
             virtual const std::string get_tag(void) = 0;
 
         };
