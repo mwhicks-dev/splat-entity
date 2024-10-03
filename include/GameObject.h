@@ -46,11 +46,17 @@ namespace SPlat {
             void add_component(Component&);
 
             /// @brief retrieves a component by its tag
+            /// @tparam T type of asset to return
             /// @param tag uniquely identifying tag provided by component
             /// @return component with matching tag, or a null pointer
             ///
             /// @see Component::get_tag(void)
-            Component* get_component(std::string);
+            template <class T>
+            T* get_component(std::string tag) {
+                return components.count(tag) == 0
+                        ? nullptr
+                        : dynamic_cast<T*>(components[tag]);
+            }
 
             /// @brief removes a component by its tag
             /// @param tag uniquely identifying tag provided by component
@@ -65,11 +71,17 @@ namespace SPlat {
             void add_asset(Asset&);
 
             /// @brief retrieves an asset by its tag
+            /// @tparam T type of asset to return
             /// @param tag uniquely identifying tag provided by an asset
             /// @return asset with matching tag, or a null pointer
             ///
             /// @see Asset::get_tag(void)
-            Asset* get_asset(std::string);
+            template <class T>
+            T* get_asset(std::string tag) {
+                return assets.count(tag) == 0
+                        ? nullptr
+                        : dynamic_cast<T*>(assets[tag]);
+            }
 
             /// @brief removes an asset by its tag
             /// @param tag uniquely identifying tag provided by component
