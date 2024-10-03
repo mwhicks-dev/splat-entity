@@ -8,8 +8,7 @@ namespace SPlat {
 
         public:
 
-            MonoBehavior(const size_t id, const size_t owner, 
-                    const bool enabled) : Behavior(id, owner, enabled) {}
+            MonoBehavior(const size_t, const size_t, const bool);
 
             virtual void update(void) = 0;
 

@@ -10,33 +10,13 @@ namespace SPlat {
 
         public:
 
-            void initialize(size_t id) {
-                if (current != nullptr)
-                    delete current;
-                
-                current = new GameObject(id);
-            }
+            void initialize(const size_t);
 
-            void add_component(Component& component) {
-                if (current == nullptr)
-                    return;
-                
-                current->add_component(component);
-                component.set_owner(current->get_id());
-            }
+            void add_component(Component&);
 
-            void add_asset(Asset& asset) {
-                if (current == nullptr)
-                    return;
-                
-                current->add_asset(asset);
-            }
+            void add_asset(Asset&);
 
-            GameObject* get_game_object(void) {
-                GameObject* tmp = current;
-                current = nullptr;
-                return tmp;
-            }
+            GameObject* get_game_object(void);
 
         };
 

@@ -10,18 +10,17 @@ namespace SPlat {
 
             size_t owner;
 
+            void set_id(const size_t);
+
         public:
 
-            Component(const size_t id, const size_t owner) {
-                this->id = id;
-                this->owner = owner;
-            }
+            Component(const size_t, const size_t);
 
-            const size_t get_id(void) { return id; }
+            const size_t get_id(void);
 
-            const size_t get_owner(void) { return owner; }
+            const size_t get_owner(void);
 
-            void set_owner(const size_t id) { this->id = id; }
+            void set_owner(const size_t);
 
             virtual const std::string get_tag(void) = 0;
 

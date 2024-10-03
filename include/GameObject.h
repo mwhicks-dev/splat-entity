@@ -15,45 +15,25 @@ namespace SPlat {
 
             std::unordered_map<std::string, Asset&> assets;
 
+            void set_id(const size_t);
+
         public:
 
-            GameObject(size_t id) { this->id = id; }
+            GameObject(const size_t);
 
-            const size_t get_id(void) { return id; }
+            const size_t get_id(void);
 
-            void add_component(Component& component) { 
-                components[component.get_tag()] = component;
-            }
+            void add_component(Component&);
 
-            Component* get_component(std::string tag) {
-                return components.count(tag) == 0
-                        ? nullptr
-                        : &components[tag];
-            }
+            Component* get_component(std::string);
 
-            void remove_component(std::string tag) {
-                if (components.count(tag) == 0)
-                    return;
-                
-                components.erase(tag);
-            }
+            void remove_component(std::string);
 
-            void add_asset(Asset& asset) {
-                assets[asset.get_tag()] = asset;
-            }
+            void add_asset(Asset&);
 
-            Asset* get_asset(std::string tag) {
-                return assets.count(tag) == 0
-                        ? nullptr
-                        : &assets[tag];
-            }
+            Asset* get_asset(std::string);
 
-            void remove_asset(std::string tag) {
-                if (assets.count(tag) == 0)
-                    return;
-                
-                assets.erase(tag);
-            }
+            void remove_asset(std::string);
 
         };
 

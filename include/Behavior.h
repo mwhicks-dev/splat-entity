@@ -10,28 +10,13 @@ namespace SPlat {
 
         public:
 
-            Behavior(const size_t id, const size_t owner, const bool enabled) 
-                    : Component(id, owner) {
-                if (enabled) {
-                    enable();
-                } else {
-                    disable();
-                }
-            }
+            Behavior(const size_t, const size_t, const bool);
 
-            void enable(void) { 
-                enabled = true;
-                on_enable();
-            }
+            void enable(void);
 
-            void disable(void) {
-                enabled = false;
-                on_disable();
-            }
+            void disable(void);
 
-            const bool is_enabled(void) {
-                return enabled;
-            }
+            const bool is_enabled(void);
 
             virtual void on_enable(void) = 0;
 
