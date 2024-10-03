@@ -11,9 +11,9 @@ namespace SPlat {
 
             size_t id;
 
-            std::unordered_map<std::string, Component&> components;
+            std::unordered_map<std::string, Component*> components;
 
-            std::unordered_map<std::string, Asset&> assets;
+            std::unordered_map<std::string, Asset*> assets;
 
             void set_id(const size_t);
 

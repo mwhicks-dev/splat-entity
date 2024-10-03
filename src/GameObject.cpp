@@ -8,12 +8,12 @@ void GameObject::set_id(const size_t id) { this->id = id; }
 
 const size_t GameObject::get_id(void) { return id; }
 
-void GameObject::add_component(Component& c) { components[c.get_tag()] = c; }
+void GameObject::add_component(Component& c) { components[c.get_tag()] = &c; }
 
 Component* GameObject::get_component(std::string tag) {
     return components.count(tag) == 0
             ? nullptr
-            : &components[tag];
+            : components[tag];
 }
 
 void GameObject::remove_component(std::string tag) {
@@ -23,12 +23,12 @@ void GameObject::remove_component(std::string tag) {
     components.erase(tag);
 }
 
-void GameObject::add_asset(Asset& a) { assets[a.get_tag()] = a; }
+void GameObject::add_asset(Asset& a) { assets[a.get_tag()] = &a; }
 
 Asset* GameObject::get_asset(std::string tag) {
     return assets.count(tag) == 0
             ? nullptr
-            : &assets[tag];
+            : assets[tag];
 }
 
 void GameObject::remove_asset(std::string tag) {
