@@ -1,3 +1,6 @@
+#ifndef SPlat_Entity_Behavior
+#define SPlat_Entity_Behavior
+
 #include "Component.h"
 
 namespace SPlat {
@@ -51,3 +54,5 @@ namespace SPlat {
     }
 
 }
+
+#endif

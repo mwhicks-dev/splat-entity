@@ -1,3 +1,6 @@
+#ifndef SPlat_Entity_AbstractGameObjectFactory
+#define SPlat_Entity_AbstractGameObjectFactory
+
 #include "GameObjectBuilder.h"
 
 namespace SPlat {
@@ -36,3 +39,5 @@ namespace SPlat {
     }
 
 }
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef SPlat_Entity_Asset
+#define SPlat_Entity_Asset
+
 #include <string>
 
 namespace SPlat {
@@ -27,3 +30,5 @@ namespace SPlat {
     }
 
 }
+
+#endif
