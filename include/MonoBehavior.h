@@ -1,3 +1,6 @@
+#ifndef SPlat_Entity_MonoBehavior
+#define SPlat_Entity_MonoBehavior
+
 #include "Behavior.h"
 
 namespace SPlat {
@@ -36,3 +39,5 @@ namespace SPlat {
     }
 
 }
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef SPlat_Entity_GameObject
+#define SPlat_Entity_GameObject
+
 #include "Component.h"
 #include "Asset.h"
 
@@ -92,3 +95,5 @@ namespace SPlat {
     }
 
 }
+
+#endif

@@ -1,3 +1,6 @@
+#ifndef SPlat_Entity_Component
+#define SPlat_Entity_Component
+
 #include <string>
 
 namespace SPlat {
@@ -63,3 +66,5 @@ namespace SPlat {
     }
 
 }
+
+#endif

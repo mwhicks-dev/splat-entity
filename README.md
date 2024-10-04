@@ -6,6 +6,10 @@ This repository compiles the Entity layer of the SPlat Beta architecture, and in
 
 * Introduction
 * Installation
+* Usage
+* Contributing
+* License
+* Acknowledgements
 
 ## Introduction
 
